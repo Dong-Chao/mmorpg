@@ -32,7 +32,7 @@ public class BlockingUniqueQueue<E> extends LinkedBlockingQueue<E> {
 
 	@Override
 	public E take() {
-		// 该方法千万不要用 synchronized 修饰，不然一旦take()方法被阻塞了，另外一条线程就永远不能add了
+		// 该方法千万不要用 synchronized 修饰，不然一旦take()方法被阻塞了，另外一条线程就永远不能add了.
 		E head = null;
 		try {
 			head = super.take();
